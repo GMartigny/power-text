@@ -1,0 +1,16 @@
+@import (reference) "main";
+
+@{prefix} {
+    /**
+     * Apply a neon effect
+     * @param {Color} [zIndex=1] - Distance from viewer
+     * @param {List<Color>} [colors=#F00, #0FF] - Anaglyph colors pair (usually red/cyan)
+     */
+    @default: #F00, #0FF;
+    .anaglyph (@zIndex: 1, @colors: @default) {
+        color: fade(#000, 30%);
+        @diff: .1em * @zIndex;
+        text-shadow: -@diff 0 0 fade(extract(@colors, 1), 50%),
+                     @diff 0 0 fade(extract(@colors, 2), 50%);
+    }
+}

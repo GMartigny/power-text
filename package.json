@@ -1,0 +1,29 @@
+{
+  "name": "power-text",
+  "version": "0.1.0",
+  "description": "Awesome CSS3 text effects.",
+  "main": "power-text.css",
+  "scripts": {
+    "lint": "lesshint src/**/*.less",
+    "prepublishOnly": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GMartigny/power-text.git"
+  },
+  "keywords": [
+    "CSS3",
+    "text",
+    "beautiful"
+  ],
+  "author": "Guillaume Martigny <guillaume.martigny@gmail.com> (https://www.guillaume-martigny.fr)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GMartigny/power-text/issues"
+  },
+  "homepage": "https://github.com/GMartigny/power-text#readme",
+  "peerDependencies": {
+    "lesshint": "^4.6.4"
+  },
+  "dependencies": {}
+}

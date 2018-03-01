@@ -1,0 +1,19 @@
+@import (reference) "main";
+
+@{prefix} {
+    /**
+     * Apply a neon effect
+     * @param {Color} [glow=#0FF] - Chosen glow color (luminance min to 50%)
+     * @param {Number} [strength=1] - Glow strength relative to font-size
+     * @param {Color} [color=#FFF] - Color for the text (better with #FFF)
+     */
+    .neon (@glow: #0FF, @strength: 1, @color: #FFF) {
+        @minLuma: 50%;
+        @light: lighten(@glow, max(0%, @minLuma - luma(@glow)));
+        color: @color;
+        text-shadow: 0 0 .1em * @strength @color,
+                     0 0 .3em * @strength @color,
+                     0 0 .5em * @strength @light,
+                     0 0 1em * @strength @light;
+    }
+}

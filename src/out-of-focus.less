@@ -1,0 +1,11 @@
+@import (reference) "main";
+
+@{prefix} {
+    /**
+     * Apply a out-of-focus effect
+     * @param {Color} [distance=1] - Blur strength
+     */
+    .out-of-focus (@distance: 1) {
+        filter: blur(3px * @distance);
+    }
+}
